@@ -1,3 +1,4 @@
+import React from 'react'
 import type { Metadata } from 'next'
 import { Roboto } from 'next/font/google'
 import '@/assets/styles/main.scss'
@@ -18,8 +19,8 @@ const roboto = Roboto({
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${roboto.variable} antialiased min-h-screen`}>
-      <body className="bg-white">{children}</body>
+    <html lang="en" className={`${roboto.variable} antialiased`}>
+      <body>{children}</body>
     </html>
   )
 }
